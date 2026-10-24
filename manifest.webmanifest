@@ -1,0 +1,1 @@
+{"name": "Midnight Frequency", "short_name": "Midnight", "start_url": "./", "display": "standalone", "orientation": "portrait", "background_color": "#203c40", "theme_color": "#203c40", "icons": [{"src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}]}

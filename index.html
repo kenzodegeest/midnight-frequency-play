@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#203c40">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Midnight Frequency</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin:0; width:100%; height:100%; overflow:hidden; background:#203c40; }
+    body { font-family:Georgia,serif; color:#293c3c; overscroll-behavior:none; }
+    #frame { position:fixed; inset:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); display:grid; place-items:center; }
+    #canvas { display:block; outline:none; touch-action:none; }
+    #cover { position:fixed; inset:0; display:grid; place-items:center; padding:28px; background:radial-gradient(ellipse at 50% 25%,#52665b,#203c40 75%); }
+    #cover[hidden] { display:none; }
+    .ticket { width:min(100%,360px); padding:32px 26px; text-align:center; background:#f4eddb; border:2px solid #c8b995; border-radius:22px; box-shadow:0 12px 45px #102c2a88; }
+    .ticket img { width:84px; height:84px; }
+    h1 { margin:14px 0; font-size:30px; font-weight:normal; }
+    p { font:15px/1.5 system-ui,sans-serif; }
+    button { min-height:52px; width:100%; border:2px solid #1d4b4a; border-radius:14px; background:#38645f; color:#fff9e7; font:bold 17px system-ui,sans-serif; cursor:pointer; }
+    button:disabled { opacity:.65; cursor:wait; }
+    button:focus-visible { outline:3px solid #b87936; outline-offset:4px; }
+    progress { width:100%; height:10px; accent-color:#38645f; }
+    #message { min-height:44px; margin:16px 0; }
+    .quiet { color:#5c6e68; font-size:12px; }
+  </style>
+  <link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+
+</head>
+<body>
+  <div id="frame"><canvas id="canvas" tabindex="0" aria-label="Midnight Frequency game"></canvas></div>
+  <div id="cover"><main class="ticket">
+    <img src="apple-touch-icon.png" alt="">
+    <h1>Midnight Frequency</h1>
+    <p id="message" role="status" aria-live="polite">Your little station is waiting.</p>
+    <progress id="progress" hidden aria-label="Loading game"></progress>
+    <button id="start" type="button">Enter the studio</button>
+    <p class="quiet">Browser edition · saves on this device</p>
+  </main></div>
+  <noscript>This game needs JavaScript enabled.</noscript>
+  <script src="web-loader.js?v=e0256e891cea"></script>
+  <script src="index.js?v=e0256e891cea"></script>
+  <script>
+    window.stationLauncher.start({"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":true,"fileSizes":{"index.pck":3399684,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4}, false);
+  </script>
+</body>
+</html>
+
